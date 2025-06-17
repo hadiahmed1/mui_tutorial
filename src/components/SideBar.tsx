@@ -7,6 +7,7 @@ import {
     Person,
     Settings,
     Storefront,
+    Sunny
 } from "@mui/icons-material";
 import {
     Box,
@@ -87,7 +88,7 @@ const Sidebar = ({ mode, setMode }: props) => {
                     <ListItem disablePadding>
                         <ListItemButton component="a" href="#simple-list">
                             <ListItemIcon>
-                                <ModeNight />
+                                {mode === "light" ? <Sunny /> : <ModeNight />}
                             </ListItemIcon>
                             <Switch onChange={() => setMode(mode === "light" ? "dark" : "light")} />
                         </ListItemButton>
