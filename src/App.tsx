@@ -1,3 +1,4 @@
+import { Box, Divider, Stack } from "@mui/material"
 import Feed from "./components/Feed"
 import Navbar from "./components/Navbar"
 import RightBar from "./components/RightBar"
@@ -5,12 +6,14 @@ import SideBar from "./components/SideBar"
 
 function App() {
   return (
-    <div>
+    <Box>
       <Navbar />
-      <Feed />
-      <SideBar />
-      <RightBar />
-    </div>
+      <Stack direction="row" spacing="2" justifyContent="space-between" divider={<Divider orientation="vertical"  flexItem />} >
+        <SideBar />
+        <Feed />
+        <RightBar />
+      </Stack>
+    </Box>
   )
 }
 
